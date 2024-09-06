@@ -6,11 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-<<<<<<< HEAD
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-
-=======
->>>>>>> efc0a0d023519fa59abd5014ca8b80b7ba978185
 </Project>
