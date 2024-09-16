@@ -53,7 +53,4 @@ namespace MultiShop.Order.Persistence.Repository
             await _context.SaveChangesAsync();
         }
     }
-:
-    {
-    }
 }
