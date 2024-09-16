@@ -6,11 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-<<<<<<< HEAD
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <Folder Include="Features\Mediator\" />
   </ItemGroup>
 
-=======
->>>>>>> efc0a0d023519fa59abd5014ca8b80b7ba978185
+  <ItemGroup>
+    <ProjectReference Include="..\MultiShop.Order.Domain\MultiShop.Order.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
