@@ -21,13 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{81BCF0F9-819F-4A0A-8E70-F5FBF930B746}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Domain", "Services\Order\Core\MultiShop.Order.Domain\MultiShop.Order.Domain.csproj", "{4F204DB6-E0E0-43BC-B133-9E8B71234DEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.Domain", "Services\Order\Core\MultiShop.Order.Domain\MultiShop.Order.Domain.csproj", "{4F204DB6-E0E0-43BC-B133-9E8B71234DEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Application", "Services\Order\Core\MultiShop.Order.Application\MultiShop.Order.Application.csproj", "{49F10534-B6EF-4AB7-B875-8A355C0213E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.Application", "Services\Order\Core\MultiShop.Order.Application\MultiShop.Order.Application.csproj", "{49F10534-B6EF-4AB7-B875-8A355C0213E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.Persistence", "Services\Order\Infrastructure\MultiShop.Order.Persistence\MultiShop.Order.Persistence.csproj", "{D4399011-4684-4FF2-B5C1-52DDE966ADD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.Persistence", "Services\Order\Infrastructure\MultiShop.Order.Persistence\MultiShop.Order.Persistence.csproj", "{D4399011-4684-4FF2-B5C1-52DDE966ADD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Order.WebApi", "Services\Order\Presentation\MultiShop.Order.WebApi\MultiShop.Order.WebApi.csproj", "{7F6F9038-C479-41DF-ADCA-D0007EF8488F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Order.WebApi", "Services\Order\Presentation\MultiShop.Order.WebApi\MultiShop.Order.WebApi.csproj", "{7F6F9038-C479-41DF-ADCA-D0007EF8488F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
