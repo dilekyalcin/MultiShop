@@ -35,15 +35,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.IdentityServer", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{FF882599-2A26-4F7D-946A-7E2D87B7D65D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.Business", "Services\Cargo\MultiShop.Cargo.Business\MultiShop.Cargo.Business.csproj", "{E2305EB0-51D0-4175-A01A-C6DEF686F9F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.Business", "Services\Cargo\MultiShop.Cargo.Business\MultiShop.Cargo.Business.csproj", "{E2305EB0-51D0-4175-A01A-C6DEF686F9F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.Entity", "Services\Cargo\MultiShop.Cargo.Entity\MultiShop.Cargo.Entity.csproj", "{B194B22F-5039-40EF-AE59-EE90603A51E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.Entity", "Services\Cargo\MultiShop.Cargo.Entity\MultiShop.Cargo.Entity.csproj", "{B194B22F-5039-40EF-AE59-EE90603A51E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.DataAccess", "Services\Cargo\MultiShop.Cargo.DataAccess\MultiShop.Cargo.DataAccess.csproj", "{7B5B6E12-337A-4066-A714-AB7F2586EEAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.DataAccess", "Services\Cargo\MultiShop.Cargo.DataAccess\MultiShop.Cargo.DataAccess.csproj", "{7B5B6E12-337A-4066-A714-AB7F2586EEAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.Dto", "Service\Cargo\MultiShop.Cargo.Dto\MultiShop.Cargo.Dto.csproj", "{7992A6B2-3FF8-491C-9A2C-7C2A1D9D6926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.Dto", "Service\Cargo\MultiShop.Cargo.Dto\MultiShop.Cargo.Dto.csproj", "{7992A6B2-3FF8-491C-9A2C-7C2A1D9D6926}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.WebApi", "Services\Cargo\MultiShop.Cargo.WebApi\MultiShop.Cargo.WebApi.csproj", "{199C6D9B-3802-47EF-AF5A-29190A006C44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.WebApi", "Services\Cargo\MultiShop.Cargo.WebApi\MultiShop.Cargo.WebApi.csproj", "{199C6D9B-3802-47EF-AF5A-29190A006C44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{FA9BD350-EA14-43C1-80B5-FE28569BDC63}"
+	ProjectSection(SolutionItems) = preProject
+		PortNumbers.txt = PortNumbers.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
