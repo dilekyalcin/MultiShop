@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
@@ -49,6 +49,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirement
 	ProjectSection(SolutionItems) = preProject
 		PortNumbers.txt = PortNumbers.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{ED8C43D7-37D7-42DD-B293-CF4C33E2D416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Basket", "Services\Basket\MultiShop.Basket\MultiShop.Basket.csproj", "{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{9A5E43A9-E147-468D-B6CF-BC79FAE26EC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.WebUI", "Frontends\MultiShop.WebUI\MultiShop.WebUI.csproj", "{0C4938FA-F700-4D50-B292-CDA468A0E970}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +112,14 @@ Global
 		{199C6D9B-3802-47EF-AF5A-29190A006C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{199C6D9B-3802-47EF-AF5A-29190A006C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{199C6D9B-3802-47EF-AF5A-29190A006C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4938FA-F700-4D50-B292-CDA468A0E970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4938FA-F700-4D50-B292-CDA468A0E970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4938FA-F700-4D50-B292-CDA468A0E970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4938FA-F700-4D50-B292-CDA468A0E970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +144,9 @@ Global
 		{7B5B6E12-337A-4066-A714-AB7F2586EEAC} = {FF882599-2A26-4F7D-946A-7E2D87B7D65D}
 		{7992A6B2-3FF8-491C-9A2C-7C2A1D9D6926} = {FF882599-2A26-4F7D-946A-7E2D87B7D65D}
 		{199C6D9B-3802-47EF-AF5A-29190A006C44} = {FF882599-2A26-4F7D-946A-7E2D87B7D65D}
+		{ED8C43D7-37D7-42DD-B293-CF4C33E2D416} = {2288C6F5-9337-414C-8B0D-A96C5ECD84A2}
+		{A88B8CC5-81A9-4D3A-875C-08CFC5E453CB} = {ED8C43D7-37D7-42DD-B293-CF4C33E2D416}
+		{0C4938FA-F700-4D50-B292-CDA468A0E970} = {9A5E43A9-E147-468D-B6CF-BC79FAE26EC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58FB86B0-1A90-4C74-A610-62F29122FC74}
