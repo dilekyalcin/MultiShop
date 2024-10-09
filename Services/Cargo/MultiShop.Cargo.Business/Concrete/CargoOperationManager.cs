@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace MultiShop.Cargo.Business.Concrete
 {
-    public class CargoOperatonManager : ICargoOperationService
+    public class CargoOperationManager : ICargoOperationService
     {
         private readonly ICargoOperationDal _cargoOperationDal;
 
-        public CargoOperatonManager(ICargoOperationDal cargoOperationDal)
+        public CargoOperationManager(ICargoOperationDal cargoOperationDal)
         {
             _cargoOperationDal = cargoOperationDal;
         }
