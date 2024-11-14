@@ -17,6 +17,7 @@ namespace MultiShop.Catalog.Services.ProductImageServices
             var client = new MongoClient(_databaseSettings.ConnectionString);
             var database = client.GetDatabase(_databaseSettings.DatabaseName);
             _productImageCollection = database.GetCollection<ProductImage>(_databaseSettings.ProductImageCollectionName);
+            _mapper = mapper;
         }
         public async Task CreateProductImageAsync(CreateProductImageDto createProductImageDto)
         {
@@ -38,6 +39,12 @@ namespace MultiShop.Catalog.Services.ProductImageServices
         public async Task<GetByIdProductImageDto> GetByIdProductImageAsync(string id)
         {
             var values = await _productImageCollection.Find<ProductImage>(x => x.ProductImagesID == id).FirstOrDefaultAsync();
+            return _mapper.Map<GetByIdProductImageDto>(values);
+        }
+
+        public async Task<GetByIdProductImageDto> GetByProductIdProductImageAsync(string id)
+        {
+            var values = await _productImageCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetByIdProductImageDto>(values);
         }
 
