@@ -47,6 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.WebApi", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{FA9BD350-EA14-43C1-80B5-FE28569BDC63}"
 	ProjectSection(SolutionItems) = preProject
+		LoginIndex.txt = LoginIndex.txt
+		OcelotCodeExample.txt = OcelotCodeExample.txt
+		OcelotLink.txt = OcelotLink.txt
 		PortNumbers.txt = PortNumbers.txt
 		SimpleCode.txt = SimpleCode.txt
 		UserExample.txt = UserExample.txt
