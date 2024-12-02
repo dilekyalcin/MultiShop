@@ -1,52 +1,45 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.CatalogDtos.OfferDiscountDtos;
+using MultiShop.WebUI.Services.CatalogServices.OfferDiscountServices;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace MultiShop.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
     [Route("Admin/OfferDiscount")]
     public class OfferDiscountController : Controller
     {
-        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IOfferDiscountService _offerDiscountService;
 
-        public OfferDiscountController(IHttpClientFactory httpClientFactory)
+        public OfferDiscountController(IOfferDiscountService offerDiscountService)
         {
-            _httpClientFactory = httpClientFactory;
+            _offerDiscountService = offerDiscountService;
         }
-
-        [Route("Index")]
-        public async Task<IActionResult> Index()
+        void OfferDiscountViewbagList()
         {
             ViewBag.v1 = "Home";
             ViewBag.v2 = "Discount Offers";
             ViewBag.v3 = "Discount Offer List";
             ViewBag.v0 = "Discount Offer Operations";
+        }
 
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7224/api/OfferDiscounts");
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultOfferDiscountDto>>(jsonData);
+        [Route("Index")]
+        public async Task<IActionResult> Index()
+        {
+            OfferDiscountViewbagList();
 
-                ViewBag.CanAddMoreOffers = values.Count < 2;
-                return View(values);
-            }
-            return View();
+            var values = await _offerDiscountService.GetAllOfferDiscountAsync();
+            ViewBag.CanAddMoreOffers = values.Count < 2;
+            return View(values);
         }
 
         [HttpGet]
         [Route("CreateOfferDiscount")]
         public IActionResult CreateOfferDiscount()
         {
-            ViewBag.v1 = "Home";
-            ViewBag.v2 = "Discount Offers";
-            ViewBag.v3 = "Discount Offer List";
-            ViewBag.v0 = "Discount Offer Operations";
+            OfferDiscountViewbagList();
 
             return View();
         }
@@ -55,62 +48,38 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         [Route("CreateOfferDiscount")]
         public async Task<IActionResult> CreateOfferDiscount(CreateOfferDiscountDto createOfferDiscountDto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(createOfferDiscountDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7224/api/OfferDiscounts", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
-            }
-            return View();
+            await _offerDiscountService.CreateOfferDiscountAsync(createOfferDiscountDto);
+         
+            return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
+         
         }
 
 
         [Route("DeleteOfferDiscount/{id}")]
         public async Task<IActionResult> DeleteOfferDiscount(string id)
         {
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("https://localhost:7224/api/OfferDiscounts?id=" + id);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
-            }
-            return View();
+            await _offerDiscountService.DeleteOfferDiscountAsync(id);
+            return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
+    
         }
 
         [Route("UpdateOfferDiscount/{id}")]
         [HttpGet]
         public async Task<IActionResult> UpdateOfferDiscount(string id)
         {
-            ViewBag.v1 = "Home";
-            ViewBag.v2 = "Discount Offers";
-            ViewBag.v3 = "Discount Offer List";
-            ViewBag.v0 = "Discount Offer Operations";
-            var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7224/api/OfferDiscounts/" + id);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateOfferDiscountDto>(jsonData);
-                return View(values);
-            }
-            return View();
+            OfferDiscountViewbagList();
+            var values = await _offerDiscountService.GetByIdOfferDiscountAsync(id);
+            return View(values);
         }
 
         [Route("UpdateOfferDiscount/{id}")]
         [HttpPost]
         public async Task<IActionResult> UpdateOfferDiscount(UpdateOfferDiscountDto updateOfferDiscountDto)
         {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateOfferDiscountDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("https://localhost:7224/api/OfferDiscounts/", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
-            }
-            return View();
+            await _offerDiscountService.UpdateOfferDiscountAsync(updateOfferDiscountDto);
+            
+            return RedirectToAction("Index", "OfferDiscount", new { area = "Admin" });
+
         }
     }
 }
