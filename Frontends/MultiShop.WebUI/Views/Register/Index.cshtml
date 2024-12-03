@@ -1,0 +1,107 @@
+﻿@model CreateRegisterDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MultiShop Register Panel</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="~/colorlib-regform-30/css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="~/colorlib-regform-30/fonts/line-awesome/css/line-awesome.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="~/colorlib-regform-30/css/style.css" />
+</head>
+<body class="form-v4">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h3>MultiShop E-Commerce</h3>
+				<p class="text-1">Register in 1 minute to carry out e-commerce transactions through our MultiShop project and be informed about discounted products and opportunities.</p>
+				<p class="text-2">If you have an account, you can access the login page from the link below.</p>
+				<div class="form-left-last">
+					<a href="/Login/Index/" class="account" style="height: 150px; width:150px; font-size: 10px; padding: 10px; text-align: center; line-height: 80px !important;">Log In</a>
+				</div>
+			</div>
+			<form class="form-detail" method="post">
+				<h3>MultiShop Register Form</h3>
+				<div class="form-group">
+					<div class="form-row form-row-1">
+						<label for="first_name">First Name</label>
+						<input type="text" asp-for="Name" id="first_name" class="input-text">
+					</div>
+					<div class="form-row form-row-1">
+						<label for="last_name">Last Name</label>
+						<input type="text" asp-for="Surname" id="last_name" class="input-text">
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="your_email">Your Email</label>
+					<input type="text" asp-for="Email" id="your_email" class="input-text" required pattern="[^@@]+@@[^@@]+.[a-zA-Z]{2,6}">
+				</div>
+				<div class="form-row">
+					<label for="your_username">User Name</label>
+					<input type="text" asp-for="Username" id="your_username" class="input-text" required>
+				</div>
+				<div class="form-group">
+					<div class="form-row form-row-1 ">
+						<label for="password">Password</label>
+						<input type="password" asp-for="Password" id="password" class="input-text" required>
+					</div>
+					<div class="form-row form-row-1">
+						<label for="confirm-password">Confirm Password</label>
+						<input type="password" asp-for="ConfirmPassword" id="confirm_password" class="input-text" required>
+					</div>
+				</div>
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		// just for the demos, avoids form submit
+		jQuery.validator.setDefaults({
+		  	debug: true,
+		  	success:  function(label){
+        		label.attr('id', 'valid');
+   		 	},
+		});
+		$( "#myform" ).validate({
+		  	rules: {
+			    password: "required",
+		    	confirm_password: {
+		      		equalTo: "#password"
+		    	}
+		  	},
+		  	messages: {
+		  		first_name: {
+		  			required: "Please enter a firstname"
+		  		},
+		  		last_name: {
+		  			required: "Please enter a lastname"
+		  		},
+		  		your_email: {
+		  			required: "Please provide an email"
+		  		},
+		  		password: {
+	  				required: "Please enter a password"
+		  		},
+		  		confirm_password: {
+		  			required: "Please enter a password",
+		      		equalTo: "Wrong Password"
+		    	}
+		  	}
+		});
+	</script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
