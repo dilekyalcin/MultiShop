@@ -38,9 +38,9 @@ namespace MultiShop.IdentityServer
             new ApiScope("CargoFullPermission", "Full authority for cargo operations"),
             new ApiScope("BasketFullPermission", "Full authority for basket operations"),
             new ApiScope("OcelotFullPermission", "Full authority for ocelot operations"),
-            new ApiScope("ResourceComment", "Full authority for comment operations"),
-            new ApiScope("ResourcePayment", "Full authority for payment operations"),
-            new ApiScope("ResourceImage", "Full authority for image operations"),
+            new ApiScope("CommentFullPermission", "Full authority for comment operations"),
+            new ApiScope("PaymentFullPermission", "Full authority for payment operations"),
+            new ApiScope("ImageFullPermission", "Full authority for image operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<Client> Clients => new Client[]
