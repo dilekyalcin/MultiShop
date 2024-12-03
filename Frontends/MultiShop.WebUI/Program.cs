@@ -20,6 +20,33 @@ using MultiShop.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
+{
+    opt.LoginPath = "/Login/Index/";
+    opt.LogoutPath = "/Login/Logout/";
+    opt.AccessDeniedPath = "/Pages/AccessDenied/";
+    opt.Cookie.HttpOnly = true;
+    opt.Cookie.SameSite = SameSiteMode.Strict;
+    opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    opt.Cookie.Name = "MultiShopJwt";
+
+});
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
+{
+    opt.LoginPath = "/Login/Index/";
+    opt.ExpireTimeSpan = TimeSpan.FromDays(5);
+    opt.Cookie.Name = "MultiShopCookie";
+    opt.SlidingExpiration = true;
+});
+
+builder.Services.AddAccessTokenManagement();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+builder.Services.AddHttpClient<IIdentityService, IdentityService>();
+
 builder.Services.AddHttpClient();
 
 // Add services to the container.
@@ -100,6 +127,7 @@ builder.Services.AddHttpClient<IContactService, ContactService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Catalog.Path}");
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
