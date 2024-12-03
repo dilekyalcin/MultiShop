@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.CatalogDtos.ContactDtos;
 using MultiShop.WebUI.Services.CatalogServices.ContactServices;
 using Newtonsoft.Json;
