@@ -14,13 +14,17 @@ namespace MultiShop.WebUI.Services.BasketServices
         public async Task AddBasketItem(BasketItemDto basketItemDto)
         {
             var values = await GetBasket();
-            if(values != null)
+            if (values != null)
             {
-                if (!values.BasketItems.Any(x => x.ProductId == basketItemDto.ProductId))
+                var existingItem = values.BasketItems.FirstOrDefault(x => x.ProductId == basketItemDto.ProductId);
+                if (existingItem == null)
                 {
                     values.BasketItems.Add(basketItemDto);
                 }
-
+                else
+                {
+                    existingItem.Quantity += basketItemDto.Quantity;
+                }
             }
             else
             {
@@ -29,6 +33,7 @@ namespace MultiShop.WebUI.Services.BasketServices
             }
             await SaveBasket(values);
         }
+
 
         public Task DeleteBasket(string userId)
         {
