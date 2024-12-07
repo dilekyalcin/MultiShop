@@ -8,3 +8,4 @@ Basket --> 7228
 Comment --> 7229
 Payment --> 7230
 Images --> 7231
+Message --> 7232

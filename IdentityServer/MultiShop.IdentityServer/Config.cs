@@ -21,6 +21,7 @@ namespace MultiShop.IdentityServer
             new ApiResource("ResourceComment"){Scopes = {"CommentFullPermission"}},
             new ApiResource("ResourcePayment"){Scopes = {"PaymentFullPermission"}},
             new ApiResource("ResourceImage"){Scopes = {"ImageFullPermission"}},
+            new ApiResource("ResourceMessage"){Scopes = {"MessageFullPermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[] {
@@ -41,6 +42,7 @@ namespace MultiShop.IdentityServer
             new ApiScope("CommentFullPermission", "Full authority for comment operations"),
             new ApiScope("PaymentFullPermission", "Full authority for payment operations"),
             new ApiScope("ImageFullPermission", "Full authority for image operations"),
+            new ApiScope("MessageFullPermission", "Full authority for message operations"),
             new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<Client> Clients => new Client[]
@@ -64,7 +66,7 @@ namespace MultiShop.IdentityServer
                 ClientName="Multi Shop Manager User",
                 AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
                 ClientSecrets={new Secret("multishopsecret".Sha256())},
-                AllowedScopes={ "CatalogReadPermisson", "CatalogFullPermission", "DiscountFullPermission","BasketFullPermission", "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission","OrderFullPermission",
+                AllowedScopes={ "CatalogReadPermisson", "CatalogFullPermission", "MessageFullPermission", "DiscountFullPermission","BasketFullPermission", "OcelotFullPermission", "CommentFullPermission", "PaymentFullPermission", "ImageFullPermission","OrderFullPermission",
                 IdentityServerConstants.LocalApi.ScopeName,
                 IdentityServerConstants.StandardScopes.Email,
                 IdentityServerConstants.StandardScopes.OpenId,
