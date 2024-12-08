@@ -39,6 +39,7 @@ namespace MultiShop.Cargo.WebApi.Controllers
                 District = createCargoCustomerDto.District,
                 City = createCargoCustomerDto.City,
                 Address = createCargoCustomerDto.Address,
+                UserCostumerId =createCargoCustomerDto.UserCostumerId,
                
             };
 
@@ -73,10 +74,17 @@ namespace MultiShop.Cargo.WebApi.Controllers
                 District = updateCargoCustomerDto.District,
                 City = updateCargoCustomerDto.City,
                 Address = updateCargoCustomerDto.Address,
+                UserCostumerId = updateCargoCustomerDto.UserCostumerId,
 
             };
             _cargoCustomerService.TUpdate(cargoCustomer);
             return Ok("Cargo customer update process has been completed successfully.");
+        }
+
+        [HttpGet("GetCargoCustomerById")]
+        public IActionResult GetCargoCustomerById(string id)
+        {
+            return Ok(_cargoCustomerService.TGetCargoCustomerById(id));
         }
     }
 }
