@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MultiShop.WebUI.Handlers;
 using MultiShop.WebUI.Services;
 using MultiShop.WebUI.Services.BasketServices;
+using MultiShop.WebUI.Services.CargoServices.CargoCompanyServices;
+using MultiShop.WebUI.Services.CargoServices.CargoCustomerServices;
 using MultiShop.WebUI.Services.CatalogServices.AboutServices;
 using MultiShop.WebUI.Services.CatalogServices.BrandServices;
 using MultiShop.WebUI.Services.CatalogServices.CategoryServices;
@@ -21,6 +23,7 @@ using MultiShop.WebUI.Services.Interfaces;
 using MultiShop.WebUI.Services.MessageServices;
 using MultiShop.WebUI.Services.OrderServices.OrderAddressServices;
 using MultiShop.WebUI.Services.OrderServices.OrderOderingServices;
+using MultiShop.WebUI.Services.UserIdentityServices;
 using MultiShop.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -153,6 +156,18 @@ builder.Services.AddHttpClient<IOrderOrderingService, OrderOrderingService>(opt 
 builder.Services.AddHttpClient<IMessageService, MessageService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Message.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+builder.Services.AddHttpClient<ICargoCompanyService, CargoCompanyService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Cargo.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+builder.Services.AddHttpClient<ICargoCustomerService, CargoCustomerService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Cargo.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+builder.Services.AddHttpClient<IUserIdentityService, UserIdentityService>(opt =>
+{
+    opt.BaseAddress = new Uri(values.IdentityServerUrl);
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 var app = builder.Build();
