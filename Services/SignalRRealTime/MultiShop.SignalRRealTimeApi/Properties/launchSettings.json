@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:19773",
-      "sslPort": 44300
+      "applicationUrl": "http://localhost:1903",
+      "sslPort": 44343
     }
   },
   "profiles": {
-    "MultiShop.Comment": {
+    "MultiShop.SignalRRealTimeApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:7229",
+      "applicationUrl": "https://localhost:7266",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

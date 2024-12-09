@@ -3,9 +3,9 @@
     <!-- Logo -->
     <a href="../index.html" class="logo dark-bg">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><img src="~/onlineShopTemplate/images/logos/mulhtishop1.jpg" alt="Ovio"></span>
+        <span class="logo-mini"><img src="~/onlineShopTemplate/images/logos/mulhtishop1.jpg" style="width:50px;height:50px" alt="Ovio"></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><img src="~/onlineShopTemplate/images/logos/mulhtishop1.jpg" style="width:200px;height:50px" alt="Ovio"></span>
+        <span class="logo-lg"><img src="~/onlineShopTemplate/images/logos/mulhtishop1.jpg" style="width:150px;height:30px" alt="Ovio"></span>
     </a>
 
     <!-- Header Navbar -->
@@ -28,11 +28,11 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-envelope"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <i class="icon-envelope"><span class="badge" style="position:relative;top:-10px"><strong id="messageCount">@ViewBag.messageCount</strong></span></i>
+                        <div class="notify"><span class="point"></span> </div>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
+                        <li class="header">@ViewBag.messageCount adet mesajınız var</li>
                         <li>
                             <ul class="menu">
                                 <li>
@@ -76,8 +76,8 @@
                 <!-- Notifications Menu -->
                 <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-megaphone"></i>
-                        <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <i class="fa fa-comment"><span class="badge" style="position:relative;top:-10px"><strong id="commentCount">@ViewBag.totalCommentCount</strong></span></i>
+                        <div class="notify"> <span class="point"></span> </div>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="header">Notifications</li>
@@ -95,11 +95,11 @@
                 <!-- Tasks Menu -->
                 <!-- User Account Menu -->
                 <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="~/onlineShopTemplate/images/logos/manlogo.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">Admin 01</span> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="~/onlineShopTemplate/images/logos/manlogo.jpg" class="user-image" alt="User Image"> <span class="hidden-xs">Dilek Yalçın</span> </a>
                     <ul class="dropdown-menu">
                         <li class="user-header">
                             <div class="pull-left user-img"><img src="~/onlineShopTemplate/images/logos/manlogo.jpg" class="img-responsive" alt="User"></div>
-                            <p class="text-left">Can Güneş <small>multishop@gmail.com</small> </p>
+                            <p class="text-left">Dilek Yalçın <small>dilekyal1@gmail.com</small> </p>
                             <div class="view-link text-left"><a href="#">View Profile</a> </div>
                         </li>
                         <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
