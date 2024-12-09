@@ -86,7 +86,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images", "Service
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message", "Message", "{09D82409-D268-4D82-BB9E-50014CD0078D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Message", "Services\Message\MultiShop.Message\MultiShop.Message.csproj", "{194C0240-8679-417F-8537-59AA729BEC52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Message", "Services\Message\MultiShop.Message\MultiShop.Message.csproj", "{194C0240-8679-417F-8537-59AA729BEC52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalRRealTime", "SignalRRealTime", "{D153D4FF-79CB-4CDF-B605-502245B5D826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.SignalRRealTimeApi", "Services\SignalRRealTime\MultiShop.SignalRRealTimeApi\MultiShop.SignalRRealTimeApi.csproj", "{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -174,6 +178,10 @@ Global
 		{194C0240-8679-417F-8537-59AA729BEC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{194C0240-8679-417F-8537-59AA729BEC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{194C0240-8679-417F-8537-59AA729BEC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -211,6 +219,8 @@ Global
 		{F31AA583-D011-449B-B2B9-45A2ECC9F571} = {33C560A7-133F-4104-ACED-97C2003EF0F1}
 		{09D82409-D268-4D82-BB9E-50014CD0078D} = {2288C6F5-9337-414C-8B0D-A96C5ECD84A2}
 		{194C0240-8679-417F-8537-59AA729BEC52} = {09D82409-D268-4D82-BB9E-50014CD0078D}
+		{D153D4FF-79CB-4CDF-B605-502245B5D826} = {2288C6F5-9337-414C-8B0D-A96C5ECD84A2}
+		{DB3B72D4-844C-49A3-94D7-F7C8EAD584CF} = {D153D4FF-79CB-4CDF-B605-502245B5D826}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58FB86B0-1A90-4C74-A610-62F29122FC74}
