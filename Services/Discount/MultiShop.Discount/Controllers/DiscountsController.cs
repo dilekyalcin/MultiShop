@@ -67,5 +67,11 @@ namespace MultiShop.Discount.Controllers
             return Ok(values);
 
         }
+        [HttpGet("GetDiscountCouponCount")]
+        public async Task<IActionResult> GetDiscountCouponCount()
+        {
+            var values = await _discountService.GetDiscountCouponCount();
+            return Ok(values);
+        }
     }
 }
