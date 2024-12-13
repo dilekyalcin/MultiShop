@@ -1,0 +1,8 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+}
+
+<h1>@localizer["Hello"], @localizer["the weather"] is @localizer["very"] @localizer["hot"] and @localizer["beautiful"] @localizer["today"].</h1>
+

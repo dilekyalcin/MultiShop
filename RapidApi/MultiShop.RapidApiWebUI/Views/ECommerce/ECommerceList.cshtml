@@ -1,0 +1,29 @@
+﻿@model List<ECommerceViewModel.Product>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Product title</th>
+            <th>Product Rating</th>
+            <th>Product Description</th>
+            <th>Product Price</th>
+            <th>Product Details</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.product_id</td>
+                <td>@item.product_title</td>
+                <td>@item.product_rating</td>
+                <td>@item.product_description </td>
+                <td>@item.offer.price</td>
+                <td><a href="@item.product_page_url" class="btn btn-primary">Details</a></td>
+            </tr>
+        }
+    </table>
+</div>

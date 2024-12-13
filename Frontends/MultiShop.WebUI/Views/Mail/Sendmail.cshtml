@@ -1,0 +1,23 @@
+﻿@model MailRequest
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <br />
+    <div class="alert alert-success"><h3>Email Sending Page</h3></div>
+    <form method="post">
+        <label>Recipient Email Address</label>
+        <input type="text" asp-for="ReciverMail" class="form-control" />
+        <br />
+        <label>Email Subject</label>
+        <input type="text" asp-for="Subject" class="form-control" />
+        <br />
+        <label>Email Content</label>
+        <textarea rows="5" class="form-control" asp-for="MessageContent"></textarea>
+        <br />
+        <button class="btn btn-primary">Send</button>
+    </form>
+</div>
