@@ -47,13 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Cargo.WebApi", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{FA9BD350-EA14-43C1-80B5-FE28569BDC63}"
 	ProjectSection(SolutionItems) = preProject
-		LoginIndex.txt = LoginIndex.txt
-		OcelotCodeExample.txt = OcelotCodeExample.txt
-		OcelotLink.txt = OcelotLink.txt
-		OrderHtml.txt = OrderHtml.txt
 		PortNumbers.txt = PortNumbers.txt
-		SimpleCode.txt = SimpleCode.txt
-		UserExample.txt = UserExample.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{ED8C43D7-37D7-42DD-B293-CF4C33E2D416}"
@@ -96,9 +90,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images.WebUI", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQMessage", "RabbitMQMessage", "{4CC0BFC5-7F7E-4B9C-9336-3A8DC0AC2E69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.RabbitMQMessageApi", "Services\RabbitMQMessage\MultiShop.RabbitMQMessageApi\MultiShop.RabbitMQMessageApi.csproj", "{274A3606-1790-4665-8B09-FA6DBC732A3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.RabbitMQMessageApi", "Services\RabbitMQMessage\MultiShop.RabbitMQMessageApi\MultiShop.RabbitMQMessageApi.csproj", "{274A3606-1790-4665-8B09-FA6DBC732A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.RapidApiWebUI", "RapidApi\MultiShop.RapidApiWebUI\MultiShop.RapidApiWebUI.csproj", "{AB472EBD-AC70-45E7-B85B-30F05A1CCB75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.RapidApiWebUI", "RapidApi\MultiShop.RapidApiWebUI\MultiShop.RapidApiWebUI.csproj", "{AB472EBD-AC70-45E7-B85B-30F05A1CCB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
